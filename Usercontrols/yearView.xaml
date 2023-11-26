@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="EczaneTakvim.Usercontrols.yearView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EczaneTakvim.Usercontrols"
+             mc:Ignorable="d" 
+             d:DesignHeight="380" d:DesignWidth="800" Background="White">
+    <UserControl.Resources>
+        <Style x:Key="lbl_year" TargetType="Label">
+            <Setter Property="Background" Value="#FFBDDAF5"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontSize" Value="22"/>
+        </Style>
+        <Style x:Key="btn_arrow" TargetType="Button">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Margin" Value="10,0"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="330"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Width="800">
+            <Button HorizontalAlignment="Left" Style="{StaticResource btn_arrow}" x:Name="btn_geri" Click="Btn_geri_Click">
+                <Button.Content>
+                    <Image Source="/Resources/left_direction.png" Margin="5"/>
+                </Button.Content>
+            </Button>
+            <Label x:Name="label1" Content="2021" Width="600" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" FontSize="28"/>
+            <Button HorizontalAlignment="Right" Style="{StaticResource btn_arrow}" x:Name="btn_ileri" Click="Btn_ileri_Click">
+                <Button.Content>
+                    <Image Source="/Resources/right_direction.png" Margin="5"/>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Ocak"    Grid.Column="0" Grid.Row="0" Style="{StaticResource lbl_year}" x:Name="lbl_month1"/>
+            <Label Content="Şubat"   Grid.Column="1" Grid.Row="0" Style="{StaticResource lbl_year}" x:Name="lbl_month2"/>
+            <Label Content="Mart"    Grid.Column="2" Grid.Row="0" Style="{StaticResource lbl_year}" x:Name="lbl_month3"/>
+            <Label Content="Nisan"   Grid.Column="3" Grid.Row="0" Style="{StaticResource lbl_year}" x:Name="lbl_month4"/>
+            <Label Content="Mayıs"   Grid.Column="0" Grid.Row="1" Style="{StaticResource lbl_year}" x:Name="lbl_month5"/>
+            <Label Content="Haziran" Grid.Column="1" Grid.Row="1" Style="{StaticResource lbl_year}" x:Name="lbl_month6"/>
+            <Label Content="Temmuz"  Grid.Column="2" Grid.Row="1" Style="{StaticResource lbl_year}" x:Name="lbl_month7"/>
+            <Label Content="Ağustos" Grid.Column="3" Grid.Row="1" Style="{StaticResource lbl_year}" x:Name="lbl_month8"/>
+            <Label Content="Eylül"   Grid.Column="0" Grid.Row="2" Style="{StaticResource lbl_year}" x:Name="lbl_month9"/>
+            <Label Content="Ekim"    Grid.Column="1" Grid.Row="2" Style="{StaticResource lbl_year}" x:Name="lbl_month10"/>
+            <Label Content="Kasım"   Grid.Column="2" Grid.Row="2" Style="{StaticResource lbl_year}" x:Name="lbl_month11"/>
+            <Label Content="Aralık"  Grid.Column="3" Grid.Row="2" Style="{StaticResource lbl_year}" x:Name="lbl_month12"/>
+        </Grid>
+    </Grid>
+</UserControl>
